@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Image slider</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+    </head>
+    <body>
+    <div class="slider">
+        <div class ="slides"> 
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+
+            <div class="slide first"> 
+                <img src="C:\Users\8J5887897\Desktop\img1.jpg" alt="">
+            </div>
+            <div class = "slide">
+                <img src="C:\Users\8J5887897\Desktop\img2.jpg" alt="">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+
+            </div>
+
+            <div class="navigation-manual">
+                <label for =radio1 class="manual-btn"></label>
+                <label for =radio2 class="manual-btn"></label>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        
+        }, 2000);
+        </script>
+    </body>
+
+
+</html>
